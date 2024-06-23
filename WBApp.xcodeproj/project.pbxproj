@@ -284,7 +284,7 @@
 				912D55282C0FAFBA004DA582 /* ContentView.swift */,
 				910B9FDE2C14EA4100A10CFA /* Lesson1 */,
 				912595782C1CDCE80053D7FC /* Lesson2 */,
-				9157F1662C20765000CF0EC2 /* HW3 */,
+				9157F1662C20765000CF0EC2 /* Leson3 */,
 				9157F1942C26EDA300CF0EC2 /* Lesson4 */,
 				910B9FDF2C14EA4600A10CFA /* Extensions */,
 				912595A52C1DA1B70053D7FC /* Helpers */,
@@ -326,13 +326,13 @@
 			path = WBApp_Widget;
 			sourceTree = "<group>";
 		};
-		9157F1662C20765000CF0EC2 /* HW3 */ = {
+		9157F1662C20765000CF0EC2 /* Leson3 */ = {
 			isa = PBXGroup;
 			children = (
 				9157F1672C20766100CF0EC2 /* SharedData.swift */,
 				9157F1862C25705F00CF0EC2 /* Intents */,
 			);
-			path = HW3;
+			path = Leson3;
 			sourceTree = "<group>";
 		};
 		9157F1862C25705F00CF0EC2 /* Intents */ = {
