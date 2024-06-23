@@ -1,13 +1,13 @@
 //
-//  WalkthroughView.swift
+//  FirstView.swift
 //  WBApp
 //
-//  Created by Alina Potapova on 06.06.2024.
+//  Created by samil on 06.06.2024.
 //
 
 import SwiftUI
 
-struct WalkthroughView: View {
+struct FirstView: View {
     @State private var isUserAgreementPresented: Bool = false
     @State private var isStartSheetPresented: Bool = false
     
@@ -39,7 +39,7 @@ struct WalkthroughView: View {
     }
 }
 
-extension WalkthroughView {
+extension FirstView {
     private var illustrationView: some View {
         Image(UI.Images.illustration)
             .resizable()
@@ -85,5 +85,5 @@ extension WalkthroughView {
 }
 
 #Preview {
-    WalkthroughView()
+    FirstView()
 }

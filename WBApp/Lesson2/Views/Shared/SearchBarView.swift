@@ -2,7 +2,7 @@
 //  SearchBarView.swift
 //  WBApp
 //
-//  Created by Alina Potapova on 09.06.2024.
+//  Created by samil on 09.06.2024.
 //
 
 import SwiftUI

@@ -2,7 +2,7 @@
 //  GeometryProxy+Extensions.swift
 //  WBApp
 //
-//  Created by Alina Potapova on 07.06.2024.
+//  Created by samil on 07.06.2024.
 //
 
 import SwiftUI
