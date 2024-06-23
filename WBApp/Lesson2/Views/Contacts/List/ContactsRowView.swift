@@ -2,7 +2,7 @@
 //  ContactRowView.swift
 //  WBApp
 //
-//  Created by Alina Potapova on 13.06.2024.
+//  Created by samil on 13.06.2024.
 //
 
 import SwiftUI

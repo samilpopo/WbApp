@@ -2,7 +2,7 @@
 //  View+Extensions.swift
 //  WBApp
 //
-//  Created by Alina Potapova on 10.06.2024.
+//  Created by samil on 10.06.2024.
 //
 
 import SwiftUI

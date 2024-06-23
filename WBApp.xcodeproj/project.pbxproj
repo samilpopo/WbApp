@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		910B9FD52C14EA2100A10CFA /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B9FD42C14EA2100A10CFA /* ButtonStyles.swift */; };
-		910B9FD72C14EA2800A10CFA /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B9FD62C14EA2800A10CFA /* WalkthroughView.swift */; };
+		910B9FD72C14EA2800A10CFA /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B9FD62C14EA2800A10CFA /* FirstView.swift */; };
 		910B9FD92C14EA2D00A10CFA /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B9FD82C14EA2D00A10CFA /* Color+Extensions.swift */; };
 		910B9FDB2C14EA3300A10CFA /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B9FDA2C14EA3300A10CFA /* Font+Extensions.swift */; };
 		910B9FDD2C14EA3C00A10CFA /* GeometryProxy+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B9FDC2C14EA3C00A10CFA /* GeometryProxy+Extensions.swift */; };
@@ -81,7 +81,7 @@
 
 /* Begin PBXFileReference section */
 		910B9FD42C14EA2100A10CFA /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
-		910B9FD62C14EA2800A10CFA /* WalkthroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
+		910B9FD62C14EA2800A10CFA /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		910B9FD82C14EA2D00A10CFA /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		910B9FDA2C14EA3300A10CFA /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 		910B9FDC2C14EA3C00A10CFA /* GeometryProxy+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeometryProxy+Extensions.swift"; sourceTree = "<group>"; };
@@ -144,13 +144,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		910B9FDE2C14EA4100A10CFA /* HW1 */ = {
+		910B9FDE2C14EA4100A10CFA /* Lesson1 */ = {
 			isa = PBXGroup;
 			children = (
-				910B9FD62C14EA2800A10CFA /* WalkthroughView.swift */,
+				910B9FD62C14EA2800A10CFA /* FirstView.swift */,
 				910B9FD42C14EA2100A10CFA /* ButtonStyles.swift */,
 			);
-			path = HW1;
+			path = Lesson1;
 			sourceTree = "<group>";
 		};
 		910B9FDF2C14EA4600A10CFA /* Extensions */ = {
@@ -167,14 +167,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		912595782C1CDCE80053D7FC /* HW2 */ = {
+		912595782C1CDCE80053D7FC /* Lesson2 */ = {
 			isa = PBXGroup;
 			children = (
 				912595812C1CDD850053D7FC /* Service */,
 				9125957D2C1CDD390053D7FC /* Models */,
 				9125957E2C1CDD490053D7FC /* Views */,
 			);
-			path = HW2;
+			path = Lesson2;
 			sourceTree = "<group>";
 		};
 		9125957D2C1CDD390053D7FC /* Models */ = {
@@ -260,7 +260,6 @@
 		912D551A2C0FAFBA004DA582 = {
 			isa = PBXGroup;
 			children = (
-				9157F1942C26EDA300CF0EC2 /* HW4 */,
 				912D55252C0FAFBA004DA582 /* WBApp */,
 				9157F1512C20756900CF0EC2 /* WBApp_Widget */,
 				9157F14C2C20756900CF0EC2 /* Frameworks */,
@@ -283,9 +282,10 @@
 				9157F1852C25704300CF0EC2 /* Info.plist */,
 				912D55262C0FAFBA004DA582 /* WBAppApp.swift */,
 				912D55282C0FAFBA004DA582 /* ContentView.swift */,
-				910B9FDE2C14EA4100A10CFA /* HW1 */,
-				912595782C1CDCE80053D7FC /* HW2 */,
+				910B9FDE2C14EA4100A10CFA /* Lesson1 */,
+				912595782C1CDCE80053D7FC /* Lesson2 */,
 				9157F1662C20765000CF0EC2 /* HW3 */,
+				9157F1942C26EDA300CF0EC2 /* Lesson4 */,
 				910B9FDF2C14EA4600A10CFA /* Extensions */,
 				912595A52C1DA1B70053D7FC /* Helpers */,
 				912595A02C1D91A20053D7FC /* Modifiers */,
@@ -344,12 +344,12 @@
 			path = Intents;
 			sourceTree = "<group>";
 		};
-		9157F1942C26EDA300CF0EC2 /* HW4 */ = {
+		9157F1942C26EDA300CF0EC2 /* Lesson4 */ = {
 			isa = PBXGroup;
 			children = (
 				9157F1932C26ED9D00CF0EC2 /* Bank.playground */,
 			);
-			path = HW4;
+			path = Lesson4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,7 +480,7 @@
 				9125958F2C1D743E0053D7FC /* View+Extensions.swift in Sources */,
 				912595A42C1D97C80053D7FC /* ContactAvatarView.swift in Sources */,
 				912595922C1D7E010053D7FC /* TabBarView.swift in Sources */,
-				910B9FD72C14EA2800A10CFA /* WalkthroughView.swift in Sources */,
+				910B9FD72C14EA2800A10CFA /* FirstView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

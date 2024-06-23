@@ -2,7 +2,7 @@
 //  Date+Extensions.swift
 //  WBApp
 //
-//  Created by Alina Potapova on 15.06.2024.
+//  Created by samil on 15.06.2024.
 //
 
 import Foundation

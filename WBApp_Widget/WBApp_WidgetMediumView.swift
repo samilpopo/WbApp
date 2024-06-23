@@ -2,7 +2,7 @@
 //  WBApp_WidgetMediumView.swift
 //  WBApp
 //
-//  Created by Alina Potapova on 17.06.2024.
+//  Created by samil on 17.06.2024.
 //
 import WidgetKit
 import SwiftUI

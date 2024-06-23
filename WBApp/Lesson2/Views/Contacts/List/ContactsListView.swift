@@ -2,7 +2,7 @@
 //  ContactsView.swift
 //  WBApp
 //
-//  Created by Alina Potapova on 08.06.2024.
+//  Created by samil on 08.06.2024.
 //
 
 import SwiftUI

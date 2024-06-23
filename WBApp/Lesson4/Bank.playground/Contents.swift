@@ -2,7 +2,7 @@
 //  Bank.swift
 //
 //
-//  Created by Alina Potapova on 15.06.2024.
+//  Created by samil on 15.06.2024.
 //
 
 import Foundation
@@ -13,7 +13,7 @@ struct Account {
     let accountNumber: String
     private(set) var balance: Double
     
-    //Метод для пополнение счета
+    // Метод для пополнения счета
     mutating func topUpBalance(with amount: Double) {
         guard amount >= 0 else {
             print("❌ Impossible to top up with a negative amount.")
@@ -24,7 +24,7 @@ struct Account {
         print("🟢 📥 \(self.accountNumber): +\(amount)💲. Balance: 💲\(balance).")
     }
     
-    //Метод для снятия средств
+    // Метод для снятия средств
     mutating func withdrawFromBalance(with amount: Double) -> Bool {
         guard amount >= 0 else {
             print("❌ Impossible to withdraw for a negative amount.")
@@ -32,6 +32,7 @@ struct Account {
         }
         
         guard amount <= balance else {
+            print("❌ \(self.accountNumber): Not enough funds for 💲\(amount). Balance: 💲\(balance)")
             return false
         }
         
@@ -46,10 +47,10 @@ struct Account {
 // MARK: Класс для представления Банка
 
 final class Bank {
-    var accounts: [String: Account] = [:]
+    private var accounts: [String: Account] = [:]
     
     // Метод для добавления нового счета
-    func addAccount(account: Account) {
+    func addAccount(_ account: Account) {
         accounts[account.accountNumber] = account
     }
     
@@ -71,11 +72,9 @@ final class Bank {
             return
         }
         
-        guard account.withdrawFromBalance(with: amount) else {
-            return
+        if account.withdrawFromBalance(with: amount) {
+            accounts[accountNumber] = account
         }
-        
-        accounts[accountNumber] = account
     }
     
     // Метод для перевода средств между счетами
@@ -84,17 +83,15 @@ final class Bank {
             print("❌ Account not found.")
             return
         }
+        
         print("📤 \(from) -> 📥 \(to): 💲\(amount)")
         print("\nTransactions:")
         
-        guard fromAccount.withdrawFromBalance(with: amount) else {
-            print("❌ \(from): Not enough funds for 💲\(amount). Balance: 💲\(fromAccount.balance)")
-            return
+        if fromAccount.withdrawFromBalance(with: amount) {
+            toAccount.topUpBalance(with: amount)
+            accounts[from] = fromAccount
+            accounts[to] = toAccount
         }
-        
-        toAccount.topUpBalance(with: amount)
-        accounts[from] = fromAccount
-        accounts[to] = toAccount
     }
     
     // Метод для печати состояния всех счетов
@@ -106,22 +103,19 @@ final class Bank {
     }
 }
 
-
-
 // MARK:  - Демонстрация функционала
 
 let bank = Bank()
 
-let account1: Account = .init(accountNumber: "123", balance: 1000.0)
-let account2: Account = .init(accountNumber: "456", balance: 2000.0)
-let account3: Account = .init(accountNumber: "789", balance: 3000.0)
+let account1 = Account(accountNumber: "123", balance: 1000.0)
+let account2 = Account(accountNumber: "456", balance: 2000.0)
+let account3 = Account(accountNumber: "789", balance: 3000.0)
 
-bank.addAccount(account: account1)
-bank.addAccount(account: account2)
-bank.addAccount(account: account3)
+bank.addAccount(account1)
+bank.addAccount(account2)
+bank.addAccount(account3)
 
 // Список счетов
-
 print("Accounts List:")
 print("-----------------------------")
 bank.printAccounts()
@@ -129,7 +123,6 @@ bank.printAccounts()
 print("\n\n")
 
 // Пополнение счета
-
 print("Top up:")
 print("--------------------------")
 
@@ -147,7 +140,6 @@ bank.printAccounts()
 print("\n\n")
 
 // Снятие средств
-
 print("Withdraw:")
 print("--------------------------")
 
@@ -165,7 +157,6 @@ bank.printAccounts()
 print("\n\n")
 
 // Переводы между счетами
-
 print("Transfers:")
 print("--------------------")
 
@@ -184,7 +175,7 @@ print("\nBefore transfer 2:")
 bank.printAccounts()
 
 print("\nTransfer 2:")
-bank.transfer(from: "789", to: "456", amount: 10000.0) // <-недостаточно средств
+bank.transfer(from: "789", to: "456", amount: 10000.0) // <- недостаточно средств
 
 print("\nAfter transfer 2:")
 bank.printAccounts()
